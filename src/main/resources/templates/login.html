@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <title>Login</title>
+  </head>
+  <body class="container-fluid">
+    <header th:insert="fragments/header :: header"></header>
+
+    <div class="mb-3">
+      <video class="col-lg-12 w-100" height="650px" autoplay muted loop>
+        <source th:src="@{/video/video-intro.mp4}" type="video/mp4" />
+      </video>
+    </div>
+
+    <div
+      class="container accordion mt-2 mb-5"
+      id="accordionPanelsStayOpenExample"
+    >
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+            ¿Quiénes Somos?
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="panelsStayOpen-headingOne"
+        >
+          <div class="accordion-body">
+            <strong>Empresa</strong> con 30 años de experiencia en el diseño,
+            ingeniería, construcción, mantenimiento, desarrollo industrial y de
+            infraestructura, al servicio del gobierno a nivel federal, estatal y
+            municipal, así como a la industria de iniciativa privada.
+            <br /><br />
+            <p>
+              Esta integrada por un cuerpo de Técnicos especializados en
+              diversas ramas de ingeniería, lo que le permite desarrollar
+              cualquier proyecto solicitado por sus clientes los cuales se
+              administran mediante la gerencia de proyectos (Project
+              Management), interviniendo directamente en la ejecución e
+              integración de los trabajos, tomando en cuenta todas las variables
+              que afectan a mediano y corto plazo en el desarrollo del proyecto.
+            </p>
+            <br /><br />
+            <p>
+              Además de lo anterior nuestro equipo se integra mediante un
+              sistema con caracter interdisciplinario, el cual siempre considera
+              como un valor inalterable la relación tiempo-costo-calidad,
+              garantizando los servicios y trabajos ejecutados, y así poder
+              respaldar el lema:
+              <strong> "Máxima Eficiencia, Mínimo Costo"</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo"
+          >
+            MISIÓN Y VISIÓN
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingTwo"
+        >
+          <div class="accordion-body">
+            <strong>Misión:</strong> Proporcionar soluciones de ingeniería,
+            construcción y mantenimiento e infraestructura industrial para la
+            iniciativa pública y privada, ofreciendo productos y servicios que
+            satisfagan sus necesidades en tiempo, costo y calidad con un máximo
+            de eficiencia para impulsar su desarrollo y contribuir con el
+            crecimiento de nuestro país. <br /><br />
+            <strong>Visión:</strong> Consolidarnos como la empresa lider en el
+            mercado nacional del ramo de ingeniería, construcción y
+            mantenimiento e infraestructura industrial mediante la confiabilidad
+            y calidad proporcionada a nuestros clientes. <br /><br />
+            <strong>Politica:</strong>La CONSTRUCTORA HOSTOTIPAQUILLO, S.A. DE
+            C.V., Estamos en contra de la corrupción en cualquiera de sus formas
+            y comprometidos en trabajar manera ética, legal y profesional dando
+            cumplimiento a esta política y lo establecido en el código de ética
+            y conducta DIRSGICO01, por lo cual no pagamos sobornos y no los
+            aceptamos, ni inducimos o influimos a tercera partes a hacer o
+            recibir sobornos en nuestro nombre. Lo cual nos permite obtener la
+            confianza de nuestros clientes en las relaciones comerciales.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree"
+          >
+            Política de Gestión Integral
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingThree"
+        >
+          <div class="accordion-body">
+            CONSTRUCTORA HOSTOTIPAQUILLO, S.A. de C.V. está comprometida a
+            proporcionar soluciones de ingeniería, fabricación, construcción y
+            mantenimiento industrial e infraestructura para la iniciativa
+            pública y privada, ofreciendo productos y servicios que satisfacen
+            las necesidades de cada cliente en tiempo, costo y calidad,
+            reduciendo el impacto ambiental adverso en la ejecución de los
+            trabajos y asegurando la integridad física, social, mental y
+            ergonómica del personal propio y subcontratado que en ella laboran,
+            promoviendo una cultura de prevención de incidentes, cumpliendo con
+            la normativa y legislación aplicable, los lineamientos técnicos,
+            ambientales y de seguridad en el trabajo establecidos por la
+            organización, sus trabajadores, sus clientes, y las partes
+            interesadas pertinentes. Para ello la Alta Dirección planifica,
+            evalúa los riegos y oportunidades, proporciona los recursos
+            necesarios y promueve la mejora continua del sistema de gestión
+            integral.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseFour"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseFour"
+          >
+            Política Anticorrupción
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingFour"
+        >
+          <div class="accordion-body">
+            <strong>1. Objetivo</strong>
+            <p>
+              La CONSTRUCTORA HOSTOTIPAQUILLO, S.A. DE C.V., por medio de esta
+              política define los lineamientos para la identificación y combate
+              de actos de Corrupción.
+            </p>
+            <hr />
+            <strong>2. Alcance</strong> Esta Política aplica a todos los
+            empleados, clientes, proveedores, contratistas y terceros con
+            quienes de manera directa o indirecta se establezca cualquier
+            relación comercial y contractual.
+            <hr />
+            <strong>3. Política</strong> La CONSTRUCTORA HOSTOTIPAQUILLO, S.A.
+            DE C.V., Estamos en contra de la corrupción en cualquiera de sus
+            formas y comprometidos en trabajar manera ética, legal y profesional
+            dando cumplimiento a esta política y lo establecido en el código de
+            ética y conducta DIRSGICO01, por lo cual no pagamos sobornos y no
+            los aceptamos, ni inducimos o influimos a tercera partes a hacer o
+            recibir sobornos en nuestro nombre. Lo cual nos permite obtener la
+            confianza de nuestros clientes en las relaciones comerciales.
+            <hr />
+            <strong>4. Actividades anticorrupción</strong>
+            La CONSTRUCTORA HOSTOTIPAQUILLO, S.A. DE C.V., Prohíbe a todo su
+            personal la realización de las siguientes conductas: a) Ofrecer o
+            aceptar sobornos a o de Funcionarios Públicos o particulares. b)
+            Ofrecer o aceptar pagos de facilitación para iniciar o agilizar
+            procesos o trámites administrativos. c) Obtener un trato de favor
+            utilizando el patrocinio o la donación como medio para conseguirlo.
+            d) Incumplimiento con todas las leyes y los reglamentos aplicables
+            relacionados a adquisiciones públicas. e) Establecer relaciones de
+            negocio con terceras partes sin cumplir los deberes mínimos e debida
+            diligencia en el conocimiento de terceros. f) Intervenir en nombre
+            de un tercero que se encuentre impedido por la Autoridad. g) Pactar
+            con un tercero con la finalidad de obtener una ventaja indebida. h)
+            Realizar operaciones con recursos de procedencia ilícita.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer th:insert="fragments/footer :: footer"></footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

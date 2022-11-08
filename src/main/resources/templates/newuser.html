@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Nuevo Usuario</title>
+
+</head>
+
+<body>
+    <div class="container-fluid col-sm-4  mdcol-sm-6 col-md-6   mt-5">
+        <div class="card ">
+            <form th:action="@{/saveuser}" th:object="${usuario}" autocomplete="off" method="POST">
+                <h5 class="card-header text-center bg-dark text-white">Nuevo Usuario</h5>
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="nombres">Nombres</label>
+                            <input type="text" class="form-control" placeholder="Nombres" th:field="*{nombres}">
+                        </div>
+                        <div class="col">
+                            <label for="apellidopaterno">Apellido Paterno</label>
+                            <input type="text" class="form-control" placeholder="Apellido Paterno"
+                                th:field="*{apellidoPaterno}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="apellidopaterno">Apellido Materno</label>
+                            <input type="text" class="form-control" placeholder="Apellido Materno"
+                                th:field="*{apellidoMaterno}">
+                        </div>
+                        <div class="col">
+                            <label for="apellidopaterno">Correo</label>
+                            <input type="text" class="form-control" placeholder="Correo" th:field="*{correo}">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <fieldset class="form-group row mt-3">
+                                <legend class="col-form-label col-sm-3 float-sm-left pt-0">
+                                    Estatus
+                                </legend>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="1" id="1" value="1" checked
+                                            th:field="*{status}" required="true" />
+                                        <label class="form-check-label" for="1">Activo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="0" id="0" value="0"
+                                            th:field="*{status}" required="true" />
+                                        <label class="form-check-label" for="0">Inactivo</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <label for="apellidopaterno">Telefono</label>
+                            <input type="text" class="form-control" placeholder="Telefono" th:field="*{telefono}">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="apellidopaterno">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" placeholder="Fecha de Nacimiento"
+                                th:field="*{fechaNacimiento}">
+                        </div>
+                        <div class="col">
+                            <label for="apellidopaterno">Fecha de Ingreso</label>
+                            <input type="date" class="form-control" placeholder="Fecha de Ingreso"
+                                th:field="*{fechaIngreso}">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="apellidopaterno">Nombre de Usuario</label>
+                            <input type="text" class="form-control" placeholder="username" th:field="*{username}">
+                        </div>
+                        <div class="col">
+                            <label for="apellidopaterno">Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Contraseña"
+                                th:field="*{password}">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputArea">Area</label>
+                            <select id="inputArea" class="form-control" th:field="*{area}">
+                                <option value="" selected="selected">Seleccione un Area</option>
+                                <option th:each="a:${area}" th:value="${a.id_area}" th:text="${a.nombre}">Area</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="inputPerfil">Perfil</label>
+                            <select id="inputPerfil" class="form-control" th:field="*{perfil}">
+                                <option value="" selected="selected">Seleccione un Perfil</option>
+                                <option value="" th:each="p:${perfil}" th:value="${p.id}" th:text="${p.perfil}">Perfil
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Seleccione foto del usuario</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" th:field="*{foto}">
+                    </div>
+
+
+                </div>
+                <div class="card-footer bg-dark">
+
+                    <input type="submit" class="btn btn-outline-success btn-lg btn-block" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
